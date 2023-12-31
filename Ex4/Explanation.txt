@@ -1,0 +1,9 @@
+Exercise  4.2
+
+The used design pattern are:
+Factory: In class CustomerMailFactory.java to make the main program know that what function should be called with out knowing the details of the funcion.
+S -> In each of class have their only responsibility are return the customers properties
+O -> Extend the Customer.java for brochure properties
+L -> Each customers class are extend from Customer.java and replace the Customer without breaking the program
+I -> In CustomerMailFactory.java the main program only know the interface of the function and not the details of the function
+D -> Each customer class are depend on the Customer.java.
