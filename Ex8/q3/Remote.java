@@ -18,6 +18,9 @@ public class Remote {
         AirConditionerOn acOn = new AirConditionerOn();
         AirConditionerOff acOff = new AirConditionerOff();
 
+        NoCmd noCmd = null;
+        NoCmdJob noCmdJob = new NoCmdJob();
+
         Header sw0 = new Header("slot 0, light Bed Room");
         HeaderJob sw0j = new HeaderJob();
         sw0j.setHeader(sw0);
@@ -58,6 +61,9 @@ public class Remote {
         acOn.setAirConditioner(ac);
         acOff.setAirConditioner(ac);
 
+        noCmd = new NoCmd();
+        noCmdJob.setCmd(noCmd);
+
         pool.addJob(sw0j);
         pool.addJob(lightOnBedroom);
         pool.addJob(lightOffBedroom);
@@ -72,6 +78,8 @@ public class Remote {
         pool.addJob(acOn);
         pool.addJob(acOff);
         pool.addJob(fsw2j);
+
+        pool.addJob(noCmdJob);
 
         pool.shutdownPool();
     }
